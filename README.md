@@ -4,28 +4,11 @@ List of Commands
 2. organize -> creates a folder Named 'Organised Folder'.
 3. help -> displays list of commands and there use. 
 
-tree command shows the files and folder inside root folder in  a tree like structure
+#tree command shows the files and folder inside root folder in  a tree like structure
 usage -> fsys tree
-example output->
-fsys tree
-        |__FileSystem
-                |__.git
-                        |__HEAD
-                        |__branches
-                        |__config
-                        |__description
-                        |__hooks
-                |__FileSystem.js
-                |__Help.js
-                |__Organize.js
-                |__README.md
-                |__Tree.js
-                |__Utility.js
-                |__package.json
 
 
-
-organise command organizes the files of the root folder in to the below mentioned categories and makes a perticular folder for that category and moves files belonging to that category into it.
+#organise command organizes the files of the root folder in to the below mentioned categories and makes a perticular folder for that category and moves files belonging to that category into it.
 
     media : ['mp4','mkv'],
     app: ['apk','deb','pkg','exe'],
@@ -36,6 +19,9 @@ organise command organizes the files of the root folder in to the below mentione
 usage -> fsys organize
 
 
-help commmand shows the list of all available commands under fsys
+
+
+
+#help commmand shows the list of all available commands under fsys
 usage -> fsys help 
 
