@@ -17,6 +17,7 @@ usage -> fsys tree
                 'odf','txt','ps','tex','doc','xls','ods'],
     archives : ['zip','7z','tar','gz','ar','iso','xz','rar'],
     images : ['jpeg','jpg','png']
+
 usage -> fsys organize
 
 
@@ -24,5 +25,6 @@ usage -> fsys organize
 
 
 #help commmand shows the list of all available commands under fsys
+
 usage -> fsys help 
 
