@@ -1,5 +1,8 @@
 const fs = require("fs");
+const readLine = require("readline");
+
 let inputArr = process.argv.slice(3);
+
 function displayContent() {
   try {
     let filePaths = [];
@@ -40,14 +43,7 @@ function displayContent() {
     filePaths.forEach((filePath) => {
       try {
         if (fs.lstatSync(filePath).isFile()) {
-          // const data = fs.readFileSync(filePath, "utf8");
-          // console.log(data);
-          fs.readFile(filePath, (err, data) => {
-            if (err) {
-              console.log({ err });
-            }
-            console.log(data);
-          });
+          readFile(filePath);
         }
       } catch (e) {
         console.log(`${filePath} is not a file`);
@@ -56,6 +52,23 @@ function displayContent() {
   } catch (e) {
     console.log(e);
   }
+}
+
+function readFile(filePath) {
+  const fileReadStream = fs.createReadStream(filePath);
+
+  const readLineObj = readLine.createInterface({
+    input: fileReadStream,
+    crlfDelay: Infinity,
+  });
+
+  let index = 1;
+  readLineObj.on("line", (line) => {
+    if (line.trim().length !== 0) {
+      console.log(`${index} ${line}\n`);
+      index++;
+    }
+  });
 }
 module.exports = {
   displayContent,
